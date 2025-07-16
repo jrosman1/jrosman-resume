@@ -162,7 +162,7 @@ nav a:hover {
 
 .hero-image:hover {
     border-color: #FFFF00;
-    background: rgba(255, 255, 0, 0.05);
+    filter: brightness(1.1);
 }
 
 /* Section Styles */
@@ -265,6 +265,7 @@ section {
 .biotech-visual:hover {
     border-color: #FF0000;
     background: rgba(255, 0, 0, 0.05);
+    filter: brightness(1.1);
 }
 
 /* Leadership Section */
@@ -286,6 +287,7 @@ section {
     background: rgba(255, 255, 255, 0.08);
     border-color: #00BFFF;
     transform: translateY(-10px);
+
 }
 
 .leadership-item h3 {
@@ -323,6 +325,7 @@ section {
 .leadership-visual:hover {
     border-color: #FFFF00;
     background: rgba(255, 255, 0, 0.05);
+    filter: brightness(1.1);
 }
 
 /* Creativity Section */
@@ -358,6 +361,7 @@ section {
 .photo-placeholder:hover {
     border-color: #FFFF00;
     background: rgba(255, 255, 0, 0.05);
+    filter: brightness(1.1);
 }
 
 .creativity-content h3 {
