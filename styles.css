@@ -1,0 +1,536 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        padding: 12px 30px;
+        transition: all 0.3s ease;
+    }
+
+    nav:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(-50%) translateY(-2px);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 80px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 30px;
+        line-height: 1.1;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.4rem;
+        color: #0000FF;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    .hero-content .description {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 18px 40px;
+        background: transparent;
+        color: #FF0000;
+        text-decoration: none;
+        border: 2px solid #FF0000;
+        border-radius: 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.4s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .cta-button:hover {
+        background: #FF0000;
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .hero-image:hover {
+        border-color: #FFFF00;
+        background: rgba(255, 255, 0, 0.05);
+    }
+
+    /* Section Styles */
+    section {
+        padding: 120px 0;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 30px;
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 80px;
+        max-width: 600px;
+        line-height: 1.6;
+    }
+
+    /* Biotech Section */
+    .biotech-item {
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        gap: 100px;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+
+    .biotech-item:nth-child(even) .biotech-content {
+        order: 2;
+    }
+
+    .biotech-item:nth-child(even) .biotech-visual {
+        order: 1;
+    }
+
+    .biotech-content h3 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .biotech-role {
+        font-size: 1.2rem;
+        color: #0000FF;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .biotech-description {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .biotech-stats {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+
+    .stat {
+        text-align: left;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #FFFF00;
+        line-height: 1;
+        display: block;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .biotech-visual {
+        width: 100%;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+    }
+
+    .biotech-visual:hover {
+        border-color: #FF0000;
+        background: rgba(255, 0, 0, 0.05);
+    }
+
+    /* Leadership Section */
+    .leadership-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin-top: 60px;
+    }
+
+    .leadership-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        transition: all 0.3s ease;
+    }
+
+    .leadership-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #0000FF;
+        transform: translateY(-10px);
+    }
+
+    .leadership-item h3 {
+        font-size: 1.8rem;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    .leadership-role {
+        font-size: 1.1rem;
+        color: #0000FF;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .leadership-description {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .leadership-visual {
+        width: 100%;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .leadership-visual:hover {
+        border-color: #FFFF00;
+        background: rgba(255, 255, 0, 0.05);
+    }
+
+    /* Creativity Section */
+    .creativity-hero {
+        display: grid;
+        grid-template-columns: 600px 1fr;
+        gap: 100px;
+        align-items: center;
+    }
+
+    .photo-showcase {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        height: 500px;
+    }
+
+    .photo-large {
+        grid-row: span 2;
+    }
+
+    .photo-placeholder {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+    }
+
+    .photo-placeholder:hover {
+        border-color: #FFFF00;
+        background: rgba(255, 255, 0, 0.05);
+    }
+
+    .creativity-content h3 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .creativity-description {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .film-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .film-tag {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 8px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .film-tag:hover {
+        background: rgba(255, 255, 0, 0.2);
+        border-color: #FFFF00;
+    }
+
+    .portfolio-link {
+        display: inline-block;
+        padding: 15px 30px;
+        background: transparent;
+        color: #FF0000;
+        text-decoration: none;
+        border: 2px solid #FF0000;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .portfolio-link:hover {
+        background: #FF0000;
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    /* Education and Skills */
+    .education-card, .skills-grid {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        margin-top: 40px;
+    }
+
+    .education-card h3 {
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .education-degree {
+        font-size: 1.2rem;
+        color: #0000FF;
+        margin-bottom: 15px;
+    }
+
+    .education-details {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+    }
+
+    .skills-categories {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .skill-category h4 {
+        color: white;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+    .skill-list {
+        list-style: none;
+    }
+
+    .skill-list li {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 8px;
+        padding-left: 15px;
+        position: relative;
+    }
+
+    .skill-list li::before {
+        content: '—';
+        position: absolute;
+        left: 0;
+        color: #FFFF00;
+    }
+
+    /* Contact */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .contact-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #0000FF;
+        transform: translateY(-5px);
+    }
+
+    .contact-item h4 {
+        color: white;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+    .contact-item a {
+        color: #0000FF;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+        color: #FF0000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+        }
+
+        .biotech-item {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .biotech-item:nth-child(even) .biotech-content,
+        .biotech-item:nth-child(even) .biotech-visual {
+            order: initial;
+        }
+
+        .leadership-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .creativity-hero {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .skills-categories {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .contact-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    /* Smooth scroll animations */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
