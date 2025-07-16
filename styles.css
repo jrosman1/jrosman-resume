@@ -563,3 +563,47 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Hero section */
+.hero-image {
+    background-image: url('photos/resume_headshot.jpg');
+}
+
+/* Biotech section - 3 different ones */
+.biotech-visual:nth-child(1) {
+    background-image: url('photos/resume_smith_and_nephew.jpg');
+}
+
+.biotech-visual:nth-child(2) {
+    background-image: url('photos/resume_philips.jpg');
+}
+
+.biotech-visual:nth-child(3) {
+    background-image: url('photos/resume_garza.png');
+}
+
+/* Leadership section - 3 different ones */
+.leadership-visual:nth-child(1) {
+    background-image: url('photos/resume_phi_delt.jpg');
+}
+
+.leadership-visual:nth-child(2) {
+    background-image: url('photos/resume_blue_key.jpg');
+}
+
+.leadership-visual:nth-child(3) {
+    background-image: url('photos/resume_shpe.jpg');
+}
+
+/* Photography section */
+.photo-placeholder.photo-large {
+    background-image: url('images/photo-main.jpg');
+}
+
+.photo-placeholder:nth-child(2) {
+    background-image: url('images/photo-street.jpg');
+}
+
+.photo-placeholder:nth-child(3) {
+    background-image: url('images/photo-portrait.jpg');
+}
