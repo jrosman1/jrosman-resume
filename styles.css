@@ -114,7 +114,7 @@ nav a:hover {
 
 .hero-content .subtitle {
     font-size: 1.4rem;
-    color: #0000FF;
+    color: #00BFFF;
     margin-bottom: 25px;
     font-weight: 600;
 }
@@ -212,7 +212,7 @@ section {
 
 .biotech-role {
     font-size: 1.2rem;
-    color: #0000FF;
+    color: #00BFFF;
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -284,7 +284,7 @@ section {
 
 .leadership-item:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: #0000FF;
+    border-color: #00BFFF;
     transform: translateY(-10px);
 }
 
@@ -296,7 +296,7 @@ section {
 
 .leadership-role {
     font-size: 1.1rem;
-    color: #0000FF;
+    color: #00BFFF;
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -430,7 +430,7 @@ section {
 
 .education-degree {
     font-size: 1.2rem;
-    color: #0000FF;
+    color: #00BFFF;
     margin-bottom: 15px;
 }
 
@@ -488,7 +488,7 @@ section {
 
 .contact-item:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: #0000FF;
+    border-color: #00BFFF;
     transform: translateY(-5px);
 }
 
@@ -499,7 +499,7 @@ section {
 }
 
 .contact-item a {
-    color: #0000FF;
+    color: #00BFFF;
     text-decoration: none;
     transition: color 0.3s ease;
 }
