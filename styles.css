@@ -618,7 +618,7 @@ section {
 
 /* Photography section */
 .photo-placeholder.photo-large {
-    background-image: url('photos/resume_feature.jpg');
+    background-image: url('photos/resume_portrait.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -632,7 +632,7 @@ section {
 }
 
 .photo-placeholder:nth-child(3) {
-    background-image: url('photos/resume_portrait.jpg');
+    background-image: url('photos/resume_feature.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
