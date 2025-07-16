@@ -7,8 +7,8 @@
 }
 
 @font-face {
-  font-family: 'Reglo';
-  src: url('fonts/Reglo Bold.otf') format('opentype');
+  font-family: 'Cooper_Hewitt';
+  src: url('fonts/CooperHewitt-Heavy.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
