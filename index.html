@@ -19,7 +19,17 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    <div class="mobile-nav">
+        <button class="mobile-nav-toggle">☰</button>
+        <div class="mobile-nav-menu">
+            <a href="#home">Home</a>
+            <a href="#biotech">Biotech</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#creativity">Creativity</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-grid">
@@ -309,8 +319,8 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
-    </script>
-        <script>
+        
+        // cursor
         const cursor = document.querySelector('.custom-cursor');
 
         document.addEventListener('mousemove', (e) => {
@@ -325,6 +335,23 @@
             el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
         });
-    </script>  
+        
+        // ADD THIS RIGHT HERE
+        // Mobile nav toggle
+        const mobileToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileMenu = document.querySelector('.mobile-nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.mobile-nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script> 
 </body>
 </html>
