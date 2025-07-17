@@ -22,9 +22,8 @@
 body {
   font-family: var(--font-body);
   font-weight: 300; 
-  background: #000 url('photos/texture.png');  
-  background-size: cover; /* Stretches to fill screen */
-  background-attachment: fixed; /* Stays in place when scrolling */
+  background: #333 
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
