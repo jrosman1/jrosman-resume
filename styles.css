@@ -22,7 +22,9 @@
 body {
   font-family: var(--font-body);
   font-weight: 300; 
-  background: #333 
+  background: #000 url('photos/texture.png');
+  background-size: 200px 200px; /* Adjust size */
+  background-repeat: repeat;
   
 }
 
