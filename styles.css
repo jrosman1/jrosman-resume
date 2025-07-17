@@ -211,14 +211,40 @@ nav a:hover {
             transform: translateX(-50%) translateY(0);
         }
     }
+
+    /* Hide custom cursor on mobile */
+    .custom-cursor {
+        display: none;
+    }
+    
+    /* Restore default cursor on mobile */
+    body {
+        cursor: auto;
+    }
+    
+    a, button, .cta-button, nav a, .portfolio-link, .contact-item a {
+        cursor: pointer !important;
+    }
+
     body::before {
         background-attachment: scroll; /* Fixed can cause issues on mobile */
         background-size: 100% 100%; /* Or try 'contain' */
     }
     .hero {
-        padding-top: 0; /* No extra padding */
-        justify-content: flex-start; /* Align to top instead of center */
-        padding: 40px 0; /* Just normal section padding */
+        height: auto; /* Don't force full screen height */
+        min-height: 80vh; /* Just most of the screen */
+        padding: 60px 0 40px 0; /* Top, right, bottom, left */
+        display: block; /* Remove flex centering */
+    }
+    
+    .hero-grid {
+        display: block; /* Stack vertically */
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
     }
 }
 /* Hero Section */
