@@ -231,6 +231,21 @@ nav a:hover {
         background-size: 100% 100%; /* Or try 'contain' */
     }
     .hero {
+        background: red !important; /* Make hero section visible */
+        height: auto !important;
+        min-height: 50vh !important;
+        padding: 20px !important;
+    }
+    
+    .hero-content h1 {
+        background: blue !important; /* Make the h1 visible */
+        color: white !important;
+        font-size: 2rem !important;
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+
+    .hero {
         height: auto; /* Don't force full screen height */
         min-height: 80vh; /* Just most of the screen */
         padding: 60px 0 40px 0; /* Top, right, bottom, left */
