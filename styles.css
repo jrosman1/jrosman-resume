@@ -220,6 +220,8 @@ nav a:hover {
     /* Restore default cursor on mobile */
     body {
         cursor: auto;
+        min-height: 100vh;
+        min-height: -webkit-fill-available; /* Safari mobile fix */
     }
     
     a, button, .cta-button, nav a, .portfolio-link, .contact-item a {
@@ -233,7 +235,8 @@ nav a:hover {
 
     .hero {
         height: auto !important;
-        min-height: 50vh !important;
+        min-height: 80vh !important;
+        min-height: -webkit-fill-available; /* Safari mobile fix */
         padding: 20px !important;
         display: block; /* Remove flex centering */
     }
