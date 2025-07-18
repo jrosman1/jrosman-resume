@@ -674,14 +674,45 @@ section {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
+    .hero {
+        height: 200vh; /* Double height to create two screens */
+        position: relative;
     }
-
+    
+    .hero-grid {
+        display: grid;
+        grid-template-rows: 100vh 100vh; /* Two full-height rows */
+        grid-template-areas: 
+            "screen1"
+            "screen2";
+        gap: 0;
+    }
+    
+    /* First screen content */
     .hero-content h1 {
+        grid-area: screen1;
+        place-self: center;
         font-size: 3rem;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .hero-image {
+        grid-area: screen1;
+        place-self: center;
+        width: 250px;
+        height: 250px;
+        order: 2; /* Image below name */
+    }
+    
+    /* Second screen content */
+    .hero .subtitle,
+    .hero .description,
+    .hero .cta-button {
+        grid-area: screen2;
+        place-self: center;
+        text-align: center;
+        max-width: 300px;
     }
 
     .biotech-item {
