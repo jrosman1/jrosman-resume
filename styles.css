@@ -50,7 +50,7 @@ body::before {
     background: rgba(255, 255, 255, 0.001);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px) invert(1);
     pointer-events: none;
     z-index: 9999;
     transition: all 0.1s ease;
@@ -63,6 +63,7 @@ body::before {
     height: 50px;
     background: rgba(255, 0, 0, 0.0.001);
     border-color: #FF0000;
+    backdrop-filter: blur(0px) invert(1);
 }
 
 a, button, .cta-button, nav a, .portfolio-link, .contact-item a {
@@ -316,6 +317,7 @@ nav a:hover {
     height: 500px;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,6 +329,21 @@ nav a:hover {
 .hero-image:hover {
     border-color: #FFFF00;
     filter: brightness(1.1);
+}
+
+.hero-image,
+.biotech-visual,
+.leadership-visual,
+.photo-placeholder {
+    transition: all 0.3s ease;
+}
+
+.hero-image:hover,
+.biotech-visual:hover,
+.leadership-visual:hover,
+.photo-placeholder:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
 /* Section Styles */
