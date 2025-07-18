@@ -542,27 +542,6 @@ section {
     margin-bottom: 30px;
 }
 
-.film-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.film-tag {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 8px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.film-tag:hover {
-    background: rgba(255, 255, 0, 0.2);
-    border-color: #FFFF00;
-}
-
 .portfolio-link {
     display: inline-block;
     padding: 15px 30px;
