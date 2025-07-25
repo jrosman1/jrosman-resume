@@ -671,48 +671,70 @@ section {
 .contact-item a:hover {
     color: #FF0000;
 }
+/* Desktop - hide hero-two and show desktop-only content */
+.hero-two {
+    display: none;
+}
 
+.desktop-only {
+    display: block;
+}
 /* Responsive */
 @media (max-width: 768px) {
+    /* Hide desktop content in hero */
+    .desktop-only {
+        display: none;
+    }
+    
+    /* Show hero-two */
+    .hero-two {
+        display: block;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+    }
+    
+    /* Style first hero section */
     .hero {
-        height: 200vh; /* Double height to create two screens */
-        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
     }
     
     .hero-grid {
-        display: grid;
-        grid-template-rows: 100vh 100vh; /* Two full-height rows */
-        grid-template-areas: 
-            "screen1"
-            "screen2";
-        gap: 0;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
     }
     
-    /* First screen content */
     .hero-content h1 {
-        grid-area: screen1;
-        place-self: center;
         font-size: 3rem;
-        text-align: center;
-        margin: 0;
+        margin-bottom: 0;
     }
     
     .hero-image {
-        grid-area: screen1;
-        place-self: center;
         width: 250px;
         height: 250px;
-        order: 2; /* Image below name */
+        margin: 0 auto;
     }
     
-    /* Second screen content */
-    .hero .subtitle,
-    .hero .description,
-    .hero .cta-button {
-        grid-area: screen2;
-        place-self: center;
+    /* Style second hero section */
+    .hero-two-content {
         text-align: center;
-        max-width: 300px;
+    }
+    
+    .hero-two .subtitle {
+        font-size: 1.2rem;
+        color: #0000FF;
+        margin-bottom: 25px;
+    }
+    
+    .hero-two .description {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 40px;
+        line-height: 1.6;
     }
 
     .biotech-item {
