@@ -310,6 +310,7 @@ nav a:hover {
     background: #FF0000;
     color: white;
     transform: translateY(-3px);
+    max-width: 200px;
 }
 
 .hero-image {
@@ -718,7 +719,7 @@ section {
     }
     
     .hero-content h1 {
-        font-size: 10rem;
+        font-size: 10rem !important;
         margin-bottom: 0 0 30px 0;
     }
     
@@ -737,8 +738,8 @@ section {
     }
     
     .hero-two .subtitle {
-        font-size: 5rem;
-        color: #0000FF;
+        font-size: 3rem !important;
+        color: #00BFFF;
         margin-bottom: 25px;
         font-weight: 600;
     }
